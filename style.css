@@ -1,0 +1,37 @@
+/* style.css */
+
+#othello-board {
+    display: grid; /* これでグリッドコンテナになります */
+    grid-template-columns: repeat(8, 1fr); /* 8等分の列を作成 */
+    
+    width: 400px;
+    height: 400px;
+    border: 3px solid #333;
+    margin: 20px auto;
+    background-color: #006400; 
+}
+
+.cell {
+    border: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* 石のスタイルも確認 */
+.piece {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%; /* 円形に */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s; /* 裏返りアニメーション用 */
+}
+
+.piece.black {
+    background-color: #000;
+}
+
+.piece.white {
+    background-color: #fff;
+}
